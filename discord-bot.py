@@ -5,7 +5,7 @@ from modules.logger.logger import Logger
 from modules.config.config import Config
 
 NAME = "discord-bot"
-CLIENT_ID = "1033646753083293788"
+CLIENT_ID = ""
 INVITE = f"https://discord.com/api/oauth2/authorize?client_id={CLIENT_ID}&permissions=8&scope=bot%20applications.commands"
 LOGGER = None
 CONFIG = None
