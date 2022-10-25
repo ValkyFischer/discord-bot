@@ -5,7 +5,7 @@ from modules.logger.logger import Logger
 from modules.config.config import Config
 
 NAME = "discord-bot"
-CLIENT_ID = ""
+CLIENT_ID = "1033646753083293788"
 INVITE = f"https://discord.com/api/oauth2/authorize?client_id={CLIENT_ID}&permissions=8&scope=bot%20applications.commands"
 LOGGER = None
 CONFIG = None
@@ -46,11 +46,10 @@ def run(logger):
 	global LOGGER, CONFIG
 	if logger is None:
 		BASE = "."
-		LOGGER = Logger(name=NAME)
 	else:
 		BASE = f"./modules/{NAME}"
-		LOGGER = logger
 
+	LOGGER = Logger(name=NAME)
 	CONFIG = Config(path=f"{BASE}/config.ini").readConfig()
 	LOGGER.info(f"Starting {CONFIG['VKore']['name']}")
 
